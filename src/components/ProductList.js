@@ -1,4 +1,4 @@
-// src/components/ProductList.js
+
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProductData } from '../api';
@@ -25,13 +25,14 @@ const ProductList = () => {
   };
 
   return (
+    <div className="product-container">
     <div className="product">
       <h2>Products</h2>
       {products.map((product) => (
         <div className="product-item" key={product.handle}>
           <h3>{product.title}</h3>
           <p>{product.description}</p>
-          <p>Price: {product.price.amount} {product.price.currencyCode}</p>
+          <p className='price'>Price: {product.price.amount} {product.price.currencyCode}</p>
           <img src={product.images.edges[0].node.src} alt={product.title} />
           <p>Quantity: {product.quantity}</p>
           <button
@@ -42,6 +43,7 @@ const ProductList = () => {
           </button>
         </div>
       ))}
+    </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-/* src/styles.css */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -14,13 +14,13 @@ body {
 }
 
 .container {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
   padding: 20px;
 }
 
 .product {
-  width: 45%;
   border: 1px solid #ddd;
   padding: 20px;
   background-color: #fff;
@@ -43,7 +43,7 @@ body {
 }
 
 .product button {
-  background-color: #333;
+  background-color: #2954b7;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -59,8 +59,12 @@ body {
   background-color: #555;
 }
 
+.price{
+  color: #2954b7;
+  font-size: medium;
+  font-weight: bolder;
+}
 .cart {
-  width: 45%;
   border: 1px solid #ddd;
   padding: 20px;
   background-color: #fff;
