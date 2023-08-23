@@ -5,7 +5,7 @@ const API_BASE_URL = 'https://boppotech.github.io/react-task-json.github.io/reac
 
 export const fetchProductData = async () => {
   try {
-    const response = await axios.get('https://boppotech.github.io/react-task-json.github.io/reactjob.json');
+    const response = await axios.get(API_BASE_URL);
     return response.data;
   } catch (error) {
     console.error('Error fetching product data:', error);
